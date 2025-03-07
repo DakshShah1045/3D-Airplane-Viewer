@@ -3,9 +3,9 @@
 import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js'
 
-import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader.js';
-import { MTLLoader } from 'three/examples/jsm/loaders/MTLLoader.js';
-import { FBXLoader } from 'three/examples/jsm/loaders/FBXLoader.js';
+import { OBJLoader } from 'three/addons/loaders/OBJLoader.js';
+import { MTLLoader } from 'three/addons/loaders/MTLLoader.js';
+import { FBXLoader } from 'three/addons/loaders/FBXLoader.js';
     const scene = new THREE.Scene()
 const aspectRatio = window.innerWidth / window.innerHeight
 const camera = new THREE.PerspectiveCamera(35, window.innerWidth/ window.innerHeight , 0.1 , 600)
@@ -29,12 +29,12 @@ scene.environment = texture;
             const manualtexture = textureLoader.load('./Airbus A310/Texture/Turkish Airlines.png');
 
         const mtlLoader = new MTLLoader();
-mtlLoader.load('/3D-Airplane-Viewer/Airbus A310/Airbus A310.mtl', function (materials) {
+mtlLoader.load('/3D-Airplane-Viewer/static/Airbus A310/Airbus A310.mtl', function (materials) {
     console.log("✅ MTL file loaded successfully!");
     materials.preload();
     const objLoader = new OBJLoader();
     objLoader.setMaterials(materials);
-objLoader.load( '/3D-Airplane-Viewer/Airbus A310/arb.obj', function (object) {
+objLoader.load( '/3D-Airplane-Viewer/static/Airbus A310/arb.obj', function (object) {
         console.log(object)
         object.scale.set(1, 1, 1); // Adjust scale
     object.position.set(0, 0, 0);  
