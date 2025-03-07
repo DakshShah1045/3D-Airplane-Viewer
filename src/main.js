@@ -40,11 +40,11 @@ scene.add(cubeMesh)*/
 
 
 const mtlLoader = new MTLLoader();
-mtlLoader.load('/3D-Airplane-Viewer/Airplane/air-model.mtl', function (materials) {
+mtlLoader.load('/3D-Airplane-Viewer/static/Airplane/air-model.mtl', function (materials) {
     materials.preload();
     const objLoader = new OBJLoader();
     objLoader.setMaterials(materials);
-    objLoader.load('/3D-Airplane-Viewer/Airplane/airplane.obj', function (object) {
+    objLoader.load('/3D-Airplane-Viewer/static/Airplane/airplane.obj', function (object) {
         console.log(object)
         object.scale.set(0.01, 0.01, 0.01); // Adjust scale
     object.position.set(0, 0, 0);  
