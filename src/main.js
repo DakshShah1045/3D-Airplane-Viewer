@@ -1,5 +1,6 @@
 
-import * as THREE from 'three';
+import * as THREE from "/3D-Airplane-Viewer/node_modules/three/build/three.module.js";
+
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js'
 import { EXRLoader } from 'three/examples/jsm/loaders/EXRLoader.js';
 
