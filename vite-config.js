@@ -1,10 +1,16 @@
 import { defineConfig } from "vite";
 
 export default defineConfig({
-  root: 'src/', // Your source files (optional)
-  publicDir: '../static/', // Public assets (optional)
-  base: "/3D-Airplane-Viewer/", // GitHub Pages base path
+  base: "/3D-Airplane-Viewer/", // Replace with your GitHub repository name
+  publicDir: "../static", // Keep your static assets directory
   build: {
-    outDir: "../dist", // Ensure the output is in "dist/"
-  }
+    outDir: "dist",
+    rollupOptions: {
+      external: [],
+    },
+  },
+  optimizeDeps: {
+    include: ["three"],
+  },
 });
+
