@@ -1,7 +1,8 @@
 console.log("Working");
 import * as THREE from "/3D-Airplane-Viewer/node_modules/three/build/three.module.js";
 
-import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
+import { OrbitControls } from "../node_modules/three/examples/jsm/controls/OrbitControls.js";
+
 
 import { EXRLoader } from 'three/examples/jsm/loaders/EXRLoader.js';
 
