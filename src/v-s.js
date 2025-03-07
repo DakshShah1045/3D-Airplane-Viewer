@@ -2,8 +2,8 @@
 import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js'
 
-import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader.js';
-import { MTLLoader } from 'three/examples/jsm/loaders/MTLLoader.js';
+import { OBJLoader } from 'three/addons/loaders/OBJLoader.js';
+import { MTLLoader } from 'three/addons/loaders/MTLLoader.js';
 
 
 
@@ -31,11 +31,11 @@ scene.environment = texture;
 
 
 const mtlLoader = new MTLLoader();
-mtlLoader.load('/3D-Airplane-Viewer/A-2/a-2.mtl', function (materials) {
+mtlLoader.load('/3D-Airplane-Viewer/static/A-2/a-2.mtl', function (materials) {
     materials.preload();
     const objLoader = new OBJLoader();
     objLoader.setMaterials(materials);
-    objLoader.load('/3D-Airplane-Viewer/A-2/a-2.obj', function (object) {
+    objLoader.load('/3D-Airplane-Viewer/static/A-2/a-2.obj', function (object) {
         console.log(object)
         object.scale.set(0.01, 0.01, 0.01); // Adjust scale
     object.position.set(0, 0, 0);  
