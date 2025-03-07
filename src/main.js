@@ -1,7 +1,8 @@
 console.log("Working");
 import * as THREE from "three";
 
-import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
+import { OrbitControls } from "three/addons/controls/OrbitControls.js"; // ✅ CORRECT
+
 
 
 import { EXRLoader } from 'three/examples/jsm/loaders/EXRLoader.js';
