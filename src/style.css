@@ -1,0 +1,56 @@
+ body { margin: 0; overflow: hidden; background-color: white}
+ canvas {
+    background: linear-gradient(to bottom, #1e3c72, #2a5298);
+}
+.hide{
+   display: none;
+}
+.visible{
+background: #222; /* Cockpit-style dark panel */
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0px 4px 10px rgba(0, 255, 255, 0.2); /* Neon shadow */
+            display: flex;
+            
+            gap: 15px;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+}
+
+.visible button{
+            background: #004466; /* Dark blue aircraft-style */
+            color: white;
+            border: 2px solid #00ccff; /* Neon blue border */
+            padding: 12px 20px;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+            font-family: Arial, sans-serif;
+            text-transform: uppercase;
+            width: 100%; /* Full width on smaller screens */
+            max-width: 180px; /* Prevents being too wide */
+}
+
+.visible button:hover{
+    background: #0077b6; /* Lighter blue hover effect */
+            box-shadow: 0 0 15px #00ccff; /* Neon glow effect */
+}
+
+@media (max-width: 480px) {
+            .visible {
+                flex-direction: column; /* Stack buttons vertically */
+                align-items: center;
+                padding: 15px;
+                width: 100%;
+            }
+
+            .visible button{
+                width: 100%; /* Full width on small screens */
+                max-width: 220px; /* Makes buttons easier to tap */
+                font-size: 14px;
+                padding: 10px 15px;
+            }
+        }
+

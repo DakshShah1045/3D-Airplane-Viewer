@@ -1,0 +1,65 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Background */
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: url('src/background.jpg') no-repeat center center/cover;
+}
+
+/* Glassmorphism Container */
+.glass-container {
+    text-align: center;
+    padding: 30px;
+    width: 90%;
+    max-width: 400px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(1px);
+    color: white;
+}
+
+/* Title */
+.glass-container h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Description */
+.glass-container p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+/* Button */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+select {
+    color: white;
+    padding: 12px 25px;
+    background: transparent;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+.btn:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
