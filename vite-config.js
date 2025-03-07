@@ -1,21 +1,20 @@
 import { defineConfig } from "vite";
-import path from "path";
 
 export default defineConfig({
-  base: "/3D-Airplane-Viewer/", // Change to your actual repo name
-  publicDir: "../static",
+  base: "/3D-Airplane-Viewer/", // Change to your GitHub repo name
+  publicDir: "../static", // Keep static assets working
   build: {
     outDir: "dist",
     rollupOptions: {
-      external: [], // Ensure nothing is excluded
+      external: [], // Ensures everything is bundled
     },
   },
   resolve: {
     alias: {
-      three: path.resolve("./node_modules/three"),
+      three: "three"
     },
   },
   optimizeDeps: {
-    include: ["three"],
+    include: ["three"], // Ensures Three.js is included in build
   },
 });
