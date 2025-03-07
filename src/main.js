@@ -2,13 +2,11 @@ console.log("Working");
 import * as THREE from "three";
 
 import { OrbitControls } from "three/addons/controls/OrbitControls.js"; // ✅ CORRECT
+import { EXRLoader } from "three/addons/loaders/EXRLoader.js"; // ✅ CORRECT
 
 
-
-import { EXRLoader } from 'three/examples/jsm/loaders/EXRLoader.js';
-
-import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader.js';
-import { MTLLoader } from 'three/examples/jsm/loaders/MTLLoader.js';
+import { OBJLoader } from 'three/addons/loaders/OBJLoader.js';
+import { MTLLoader } from 'three/addons/loaders/MTLLoader.js';
 
 
 
