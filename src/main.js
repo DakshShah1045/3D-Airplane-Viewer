@@ -1,4 +1,4 @@
-
+console.log("Working");
 import * as THREE from "/3D-Airplane-Viewer/node_modules/three/build/three.module.js";
 
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js'
